@@ -8,7 +8,7 @@ public class UserMessages {
 	
 	private Context context;
 	
-	private boolean showMessages = true;
+	private boolean showMessages = false;
 	
 	public UserMessages(Context context) {
 		this.context = context;
