@@ -9,4 +9,14 @@
         android:layout_height="wrap_content"
         android:text="@string/hello" />
 
+    
+
+    <TableRow android:layout_height="wrap_content" android:id="@+id/tableRow1" android:gravity="center|center_horizontal" android:layout_width="fill_parent">
+   		<Button
+	        android:id="@+id/mapButton"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:text="@string/mapButton" />
+   	</TableRow>
+
 </LinearLayout>

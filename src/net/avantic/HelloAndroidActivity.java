@@ -1,11 +1,14 @@
 package net.avantic;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
 
-public class HelloAndroidActivity extends Activity {
+public class HelloAndroidActivity extends Activity implements OnClickListener {
 	
 	UserMessages messages;
 	
@@ -14,6 +17,9 @@ public class HelloAndroidActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+        
+        View mapButton = findViewById(R.id.mapButton);
+        mapButton.setOnClickListener(this);
         
         messages = new UserMessages(getApplicationContext());
         
@@ -71,10 +77,28 @@ public class HelloAndroidActivity extends Activity {
 				}
 				break;
 			default:
-				messages.show("I shouldn't be here, something is wrong");
+				messages.showAlways("I shouldn't be here, something is wrong");
 				break;
 		}
     	return super.onOptionsItemSelected(item);
     }
+
+	@Override
+	public void onClick(View view) {
+		switch(view.getId()) {
+			case R.id.mapButton:
+				navigateToGeolocationActivity();
+				break;
+			default: 
+				messages.showAlways("I shouldn't be here, something is wrong");
+				break;
+		}
+	}
+	
+	private void navigateToGeolocationActivity() {
+		Intent mapActivityIntent = new Intent(this, GeolocationActivity.class);
+		startActivity(mapActivityIntent);
+	}
+    
     
 }
