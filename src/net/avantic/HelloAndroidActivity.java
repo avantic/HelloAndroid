@@ -1,5 +1,6 @@
 package net.avantic;
 
+import net.avantic.utils.UserMessages;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
