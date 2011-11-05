@@ -7,3 +7,5 @@ You can download it from the master or you can review the tags in the next order
 * HelloLifecycle: It show messages in any important points of the application, for example when it is created, when it starts or when it is destroyed, to name a few.
 
 * HelloNavigation: Now the application have a new button, if you click on it the application navigate to a new activity that can show Google Maps.
+
+* HelloGeolocation: It shows the user location on a GoogleMap.
