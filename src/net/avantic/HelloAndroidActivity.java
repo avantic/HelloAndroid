@@ -22,6 +22,9 @@ public class HelloAndroidActivity extends Activity implements OnClickListener {
         View mapButton = findViewById(R.id.mapButton);
         mapButton.setOnClickListener(this);
         
+        View weatherButton = findViewById(R.id.weatherButton);
+        weatherButton.setOnClickListener(this);
+        
         messages = new UserMessages(getApplicationContext());
         
         messages.show("onCreate call");
@@ -88,18 +91,20 @@ public class HelloAndroidActivity extends Activity implements OnClickListener {
 	public void onClick(View view) {
 		switch(view.getId()) {
 			case R.id.mapButton:
-				navigateToGeolocationActivity();
+				navigateToActivity(GeolocationActivity.class);
+				break;
+			case R.id.weatherButton:
+				navigateToActivity(WeatherActivity.class);
 				break;
 			default: 
 				messages.showAlways("I shouldn't be here, something is wrong");
 				break;
 		}
 	}
-	
-	private void navigateToGeolocationActivity() {
-		Intent mapActivityIntent = new Intent(this, GeolocationActivity.class);
-		startActivity(mapActivityIntent);
+		
+	private void navigateToActivity(Class activityClass) {
+		Intent intent = new Intent(this, activityClass);
+		startActivity(intent);
 	}
-    
     
 }

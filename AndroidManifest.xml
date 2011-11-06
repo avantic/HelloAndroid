@@ -26,6 +26,8 @@
         </activity>
         
         <activity android:label="@string/app_name" android:name=".GeolocationActivity" />
+        
+        <activity android:label="@string/app_name" android:name=".WeatherActivity" />
     </application>
 
 </manifest>

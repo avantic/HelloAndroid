@@ -5,5 +5,6 @@
     <string name="app_name">HelloAndroid</string>
     <string name="messages">Show messages</string>
     <string name="mapButton">Mapa</string>
+    <string name="weatherButton">Meteorología</string>
 
 </resources>

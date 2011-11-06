@@ -9,3 +9,5 @@ You can download it from the master or you can review the tags in the next order
 * HelloNavigation: Now the application have a new button, if you click on it the application navigate to a new activity that can show Google Maps.
 
 * HelloGeolocation: It shows the user location on a GoogleMap.
+
+* HelloWeather: This example shows how to connect to a REST web service and how to parse the XML response.
