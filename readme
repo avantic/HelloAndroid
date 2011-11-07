@@ -11,3 +11,5 @@ You can download it from the master or you can review the tags in the next order
 * HelloGeolocation: It shows the user location on a GoogleMap.
 
 * HelloWeather: This example shows how to connect to a REST web service and how to parse the XML response.
+
+* HelloAccelerometer: It's implemented a new feature that shows accelerometer axis forces.
