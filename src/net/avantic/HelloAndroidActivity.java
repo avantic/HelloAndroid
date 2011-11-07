@@ -25,6 +25,9 @@ public class HelloAndroidActivity extends Activity implements OnClickListener {
         View weatherButton = findViewById(R.id.weatherButton);
         weatherButton.setOnClickListener(this);
         
+        View accelerometerButton = findViewById(R.id.accelerometerButton);
+        accelerometerButton.setOnClickListener(this);
+        
         messages = new UserMessages(getApplicationContext());
         
         messages.show("onCreate call");
@@ -95,6 +98,9 @@ public class HelloAndroidActivity extends Activity implements OnClickListener {
 				break;
 			case R.id.weatherButton:
 				navigateToActivity(WeatherActivity.class);
+				break;
+			case R.id.accelerometerButton:
+				navigateToActivity(AccelerometerActivity.class);
 				break;
 			default: 
 				messages.showAlways("I shouldn't be here, something is wrong");
