@@ -18,19 +18,23 @@ public class HelloAndroidActivity extends Activity implements OnClickListener {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
-        
-        View mapButton = findViewById(R.id.mapButton);
-        mapButton.setOnClickListener(this);
-        
-        View weatherButton = findViewById(R.id.weatherButton);
-        weatherButton.setOnClickListener(this);
-        
-        View accelerometerButton = findViewById(R.id.accelerometerButton);
-        accelerometerButton.setOnClickListener(this);
+        setListenerForMenuButtons();
         
         messages = new UserMessages(getApplicationContext());
         
         messages.show("onCreate call");
+    }
+
+	private void setListenerForMenuButtons() {
+		prepareButton(R.id.mapButton);
+        prepareButton(R.id.weatherButton);
+        prepareButton(R.id.accelerometerButton);
+        prepareButton(R.id.photoButton);
+	}
+    
+    private void prepareButton(int buttonId) {
+    	View button = findViewById(buttonId);
+    	button.setOnClickListener(this);
     }
     
     @Override
@@ -101,6 +105,9 @@ public class HelloAndroidActivity extends Activity implements OnClickListener {
 				break;
 			case R.id.accelerometerButton:
 				navigateToActivity(AccelerometerActivity.class);
+				break;
+			case R.id.photoButton:
+				navigateToActivity(PhotoActivity.class);
 				break;
 			default: 
 				messages.showAlways("I shouldn't be here, something is wrong");
