@@ -17,3 +17,5 @@ You can download it from the master or you can review the tags in the next order
 * HelloCamera: Now the application can take photos and storage them on default directory.
 
 * HelloTorch: If the device support it, you can use the application as a torch.
+
+* HelloCanvas: Shows the canvas feature and draw circles on the screen.

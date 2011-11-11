@@ -7,9 +7,9 @@ import android.view.View;
 
 public class Circle extends View {
 
-	private final float x = 100;
+	private float x = 100;
 	
-	private final float y = 100;
+	private float y = 100;
 	
 	private final float radius = 50;
 	
@@ -17,10 +17,16 @@ public class Circle extends View {
 	
 	public Circle(Context context) {
 		super(context);
-		
 		paint.setColor(0xFFFF0000);
 	}
 	
+	public Circle(Context context, float x, float y) {
+		super(context);
+		this.x = x;
+		this.y = y;
+		paint.setColor(0xFFFF0000);
+	}
+
 	@Override
 	protected void onDraw(Canvas canvas) {
 		super.onDraw(canvas);
