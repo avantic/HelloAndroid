@@ -8,4 +8,5 @@
     <string name="weatherButton">Meteorología</string>
 	<string name="accelerometerButton">Acelerómetro</string>
 	<string name="photoButton">Fotos</string>
+	<string name="flashtorchButton">Linterna</string>
 </resources>

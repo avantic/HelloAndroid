@@ -30,6 +30,7 @@ public class HelloAndroidActivity extends Activity implements OnClickListener {
         prepareButton(R.id.weatherButton);
         prepareButton(R.id.accelerometerButton);
         prepareButton(R.id.photoButton);
+        prepareButton(R.id.flashtorchButton);
 	}
     
     private void prepareButton(int buttonId) {
@@ -108,6 +109,9 @@ public class HelloAndroidActivity extends Activity implements OnClickListener {
 				break;
 			case R.id.photoButton:
 				navigateToActivity(PhotoActivity.class);
+				break;
+			case R.id.flashtorchButton:
+				navigateToActivity(FlashTorchActivity.class);
 				break;
 			default: 
 				messages.showAlways("I shouldn't be here, something is wrong");

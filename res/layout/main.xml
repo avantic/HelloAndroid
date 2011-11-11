@@ -32,4 +32,11 @@
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:text="@string/photoButton" />
+
+ 	<Button
+ 	    android:id="@+id/flashtorchButton"
+ 	    android:layout_width="match_parent"
+ 	    android:layout_height="wrap_content"
+ 	    android:text="@string/flashtorchButton" />
+
 </LinearLayout>
