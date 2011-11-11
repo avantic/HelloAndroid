@@ -9,4 +9,5 @@
 	<string name="accelerometerButton">Acelerómetro</string>
 	<string name="photoButton">Fotos</string>
 	<string name="flashtorchButton">Linterna</string>
+	<string name="canvasButton">Canvas</string>
 </resources>

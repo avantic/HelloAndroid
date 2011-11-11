@@ -26,16 +26,23 @@ public class HelloAndroidActivity extends Activity implements OnClickListener {
     }
 
 	private void setListenerForMenuButtons() {
-		prepareButton(R.id.mapButton);
-        prepareButton(R.id.weatherButton);
-        prepareButton(R.id.accelerometerButton);
-        prepareButton(R.id.photoButton);
-        prepareButton(R.id.flashtorchButton);
+		prepareButtons(
+				R.id.mapButton,
+		        R.id.weatherButton,
+		        R.id.accelerometerButton,
+		        R.id.photoButton,
+		        R.id.flashtorchButton,
+		        R.id.canvasButton);
 	}
     
+	private void prepareButtons(int ... buttons) {
+		for (int buttonId : buttons)
+			prepareButton(buttonId);
+	}
+	
     private void prepareButton(int buttonId) {
-    	View button = findViewById(buttonId);
-    	button.setOnClickListener(this);
+	    	View button = findViewById(buttonId);
+	    	button.setOnClickListener(this);
     }
     
     @Override
@@ -112,6 +119,9 @@ public class HelloAndroidActivity extends Activity implements OnClickListener {
 				break;
 			case R.id.flashtorchButton:
 				navigateToActivity(FlashTorchActivity.class);
+				break;
+			case R.id.canvasButton:
+				navigateToActivity(CanvasActivity.class);
 				break;
 			default: 
 				messages.showAlways("I shouldn't be here, something is wrong");
