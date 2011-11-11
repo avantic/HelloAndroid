@@ -15,3 +15,5 @@ You can download it from the master or you can review the tags in the next order
 * HelloAccelerometer: It's implemented a new feature that shows accelerometer axis forces.
 
 * HelloCamera: Now the application can take photos and storage them on default directory.
+
+* HelloTorch: If the device support it, you can use the application as a torch.
